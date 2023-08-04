@@ -15,5 +15,5 @@ Each row of this table gives information about the name of a country, the contin
 import pandas as pd
 
 def big_countries(world: pd.DataFrame) -> pd.DataFrame:
-    big_countries = world[['name', 'population', 'area']]
-    return big_countries[(big_countries['area'] >= 3000000) | ( big_countries['population'] >= 25000000)]
+    df = world[['name', 'population', 'area']]
+    return df[(df['area'] >= 3000000) | ( df['population'] >= 25000000)]
